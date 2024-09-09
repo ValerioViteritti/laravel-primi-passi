@@ -45,7 +45,16 @@
                     <h5 class="class text-center">Lista piloti formula 1:</h5>
                     <ul class="class text-center">
                         @foreach ($pilotiFormula1 as $pilotaFormula1)
-                            <li>{{ $pilotaFormula1 }}</li>
+                            <li>
+                                {{ $loop->iteration }}: {{ $pilotaFormula1 }}
+                                @if ($loop->first)
+                                    (primo pilota)
+                                @elseif ($loop->last)
+                                    (ultimo pilota)
+                                @endif
+
+
+                            </li>
                         @endforeach
                     </ul>
                 @else
