@@ -33,7 +33,15 @@
 
     </header>
     <main>
-        <h3 class="text-center">{{ $prova }}</h3>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center g-2">
+                <h3 class="text-center">{{ $prova }}</h3>
+                <p>{{ $testo }}</p>
+            </div>
+
+        </div>
+
+
     </main>
     <footer>
         <!-- place footer here -->

@@ -49,9 +49,10 @@ Route::get('/', function () {
 Route::get('/about', function (){
 
     $prova = 'Sei in about';
+    $testo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quidem et asperiores quos recusandae odit exercitationem reprehenderit. Optio recusandae quam sequi nam ad distinctio similique, maxime ipsa, vel, beatae qui.';
 
 
-    return view('about', compact('prova'));
+    return view('about', compact('prova', 'testo'));
 
 
 });
