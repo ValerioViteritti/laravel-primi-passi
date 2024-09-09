@@ -14,33 +14,14 @@
 
 <body>
     <header>
-        <h6>{{ $consegna }}</h6>
+
     </header>
     <main>
-        <div class="container-fluid">
-            <h3 class="text-center">Ciao, sei sul progetto giusto</h3>
-            <div class="row-cols-auto justify-content-center align-items-center g-2">
-                <div class="class text-center">
-                    {{ $helloWorld }}
-                </div>
-            </div>
-            <div class="row-cols-auto justify-content-center align-items-center g-2">
-                @if ($stampa_piloti)
-                    <h5 class="class text-center">Lista piloti formula 1:</h5>
-                    <ul class="class text-center">
-                        @foreach ($pilotiFormula1 as $pilotaFormula1)
-                            <li>{{ $pilotaFormula1 }}</li>
-                        @endforeach
-                    </ul>
-                @else
-                    <h5>Nessun pilota presente!</h5>
-                @endif
+        <h3 class="text-center">{{ $prova }}</h3>
 
-            </div>
 
-        </div>
 
-        <a href="/about">Via ad About</a>
+        <a href="/">Torna alla Home</a>
     </main>
     <footer>
         <!-- place footer here -->

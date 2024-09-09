@@ -13,6 +13,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('home');
+
+    $consegna = 'A questo punto, iniziamo a prendere confidenza con le rotte e le views: cancelliamo la view welcome.blade.php e creiamo una nostra homepage. Facciamo quindi sì che la rotta / visualizzi home.blade.php
+        Inizialmente stampiamo un Hello World, poi passiamo dei dati alla view in modo da visualizzarli dinamicamente con Blade.
+        Alla view fra i dati che passate ci deve essere almeno un array che viene ciclato in pagina
+        Il file blade deve anche contenere almeno una espressione condizionale
+        Bonus:
+        Creiamo più di una pagina e visualizziamo un header menu con i link di tutte le pagine, utilizzando la funzione route()
+        Buon Laravel!';
+    $helloWorld = 'Hello World!';
+    $pilotiFormula1 = [
+        'Leclerc',
+        'Hamilton',
+        'Verstappen',
+        'Norris',
+        'Piastri',
+        'Bearman',
+        'Bottas',
+        'Ricciardo',
+        'Russel',
+        'Tsunoda',
+        'Alonso',
+        'Perez',
+        'Antonelli'
+    ];
+    $stampa_piloti = true;
+
+
+    return view('home', compact('consegna', 'helloWorld', 'pilotiFormula1', 'stampa_piloti'));
+});
+
+Route::get('/about', function (){
+
+    $prova = 'Sei in about';
+
+
+    return view('about', compact('prova'));
+
+
 });
