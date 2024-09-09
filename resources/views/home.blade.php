@@ -14,10 +14,10 @@
 
 <body>
     <header>
-        <h6>{{ $consegna }}</h6>
+        {{-- <h6>{{ $consegna }}</h6> --}}
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Primi Passi Laravel</a>
+                <a class="navbar-brand" href="{{ route('home') }}">Primi Passi Laravel</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
