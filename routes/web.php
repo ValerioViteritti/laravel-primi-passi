@@ -12,9 +12,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
-
 Route::get('/', function () {
 
     $consegna = 'A questo punto, iniziamo a prendere confidenza con le rotte e le views: cancelliamo la view welcome.blade.php e creiamo una nostra homepage. Facciamo quindi sì che la rotta / visualizzi home.blade.php
@@ -44,6 +41,7 @@ Route::get('/', function () {
 
 
     return view('home', compact('consegna', 'helloWorld', 'pilotiFormula1', 'stampa_piloti'));
+
 })->name('home');
 
 Route::get('/about', function (){
@@ -51,8 +49,6 @@ Route::get('/about', function (){
     $prova = 'Sei in about';
     $testo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quidem et asperiores quos recusandae odit exercitationem reprehenderit. Optio recusandae quam sequi nam ad distinctio similique, maxime ipsa, vel, beatae qui.';
 
-
     return view('about', compact('prova', 'testo'));
-
 
 })->name('about');
