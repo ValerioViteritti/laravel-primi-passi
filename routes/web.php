@@ -44,7 +44,7 @@ Route::get('/', function () {
 
 
     return view('home', compact('consegna', 'helloWorld', 'pilotiFormula1', 'stampa_piloti'));
-});
+})->name('home');
 
 Route::get('/about', function (){
 
@@ -55,4 +55,4 @@ Route::get('/about', function (){
     return view('about', compact('prova', 'testo'));
 
 
-});
+})->name('about');
